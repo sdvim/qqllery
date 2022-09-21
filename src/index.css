@@ -19,12 +19,28 @@ input {
   line-height: 2;
 }
 
-h5 {
+img {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+p, 
+h5,
+h6 {
   margin: 0;
+}
+
+.text--centered {
+  text-align: center;
 }
 
 .grid {
   display: grid;
-  gap: 1em;
-  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--4col {
+  grid-template-columns: repeat(4, 1fr);
 }
