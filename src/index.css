@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  max-width: 40em;
+  margin: 2em auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input {
+  padding: 0;
+  text-indent: 0.25em;
+  line-height: 2;
+}
+
+h5 {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 2fr 1fr;
 }
