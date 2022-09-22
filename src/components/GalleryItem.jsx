@@ -16,7 +16,7 @@ export default function GalleryItem({
   const imageName = (name && name.length > 0) ? name : 'untitled';
 
   return (
-    <div className="GalleryItem">
+    <div className="text-truncated">
       <img src={imageSrc} width={300} alt={imageName} />
       <h6>{imageName}</h6>
     </div>

@@ -9,32 +9,34 @@ export default function Menu({
   setTitle,
 }) {
   return (
-    <div className="grid">
-      <h5>Gallery Title (optional)</h5>
-      <h5>Twitter (optional)</h5>
-      <input
-        type="text"
-        placeholder="qqllery"
-        onChange={(e) => setTitle(e.target.value)}
-        value={title}
-      />
-      <input
-        type="text"
-        placeholder="@tylerxhobbs"
-        onChange={(e) => setTwitter(e.target.value)}
-        value={twitter}
-      />
-      <h5>URL</h5>
-      <h5>Name (optional)</h5>
-      {items.map(({url, name}, index) =>
-        <InputRow
-          key={index}
-          index={index}
-          url={url}
-          name={name}
-          handleInput={updateItems}
+    <header className="bg-shade-10 p-2">
+      <div className="grid mh-auto max-width-40">
+        <h5>Gallery Title (optional)</h5>
+        <h5>Twitter (optional)</h5>
+        <input
+          type="text"
+          placeholder="qqllery"
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
         />
-      )}
-    </div>
+        <input
+          type="text"
+          placeholder="@tylerxhobbs"
+          onChange={(e) => setTwitter(e.target.value)}
+          value={twitter}
+        />
+        <h5>URL</h5>
+        <h5>Name (optional)</h5>
+        {items.map(({url, name}, index) =>
+          <InputRow
+            key={index}
+            index={index}
+            url={url}
+            name={name}
+            handleInput={updateItems}
+          />
+        )}
+      </div>
+    </header>
   );
 }
