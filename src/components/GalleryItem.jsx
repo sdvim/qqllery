@@ -17,7 +17,7 @@ export default function GalleryItem({
 
   return (
     <div className="GalleryItem">
-      <img src={imageSrc} width={300} />
+      <img src={imageSrc} width={300} alt={imageName} />
       <h6>{imageName}</h6>
     </div>
   );
