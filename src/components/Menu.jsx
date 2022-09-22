@@ -9,7 +9,7 @@ export default function Menu({
   setTitle,
 }) {
   return (
-    <header className="bg-shade-10 p-2">
+    <header className="bg-shade-10 bb-1 p-2">
       <div className="grid mh-auto max-width-40">
         <h5>Gallery Title (optional)</h5>
         <h5>Twitter (optional)</h5>

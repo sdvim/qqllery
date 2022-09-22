@@ -24,18 +24,35 @@ img {
   margin-bottom: 0.5em;
 }
 
+h1 {
+  margin: 0;
+}
+
 p, 
 h5,
 h6 {
   margin: 0;
 }
 
+a,
+a:visited {
+  color: blue;
+}
+
 .max-width-40 {
-  max-width: 40em;
+  max-width: 40rem;
+}
+
+.bb-1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .p-2 {
-  padding: 2em;
+  padding: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2em;
 }
 
 .mh-auto {
