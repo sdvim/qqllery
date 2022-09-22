@@ -1,10 +1,11 @@
 import { useMemo, useState } from "react";
-import GridItem from "./components/GridItem";
-import InputRow from "./components/InputRow";
+import Gallery from "./components/Gallery";
+import Menu from "./components/Menu";
 
-function App() {
+export default function App() {
   const [items, setItems] = useState([]);
   const [twitter, setTwitter] = useState('');
+  const [title, setTitle] = useState('');
 
   const addItem = () => {
     const newItem = { index: (items.length) }; 
@@ -26,40 +27,19 @@ function App() {
 
   return (
     <div>
-      <header className="grid">
-        <br />
-        <h5>Twitter (optional)</h5>
-        <br />
-        <input
-          type="text"
-          placeholder="@tylerxhobbs"
-          onChange={(e) => setTwitter(e.target.value)}
-          value={twitter}
-        />
-        <h5>URL</h5>
-        <h5>Name (optional)</h5>
-        {items.map(({url, name}, index) =>
-          <InputRow
-            key={index}
-            index={index}
-            url={url}
-            name={name}
-            handleInput={updateItems}
-          />
-        )}
-      </header>
-      {/* <pre>{JSON.stringify({ items, twitter }, null, 2)}</pre> */}
-      <div className="grid grid--4col text--centered">
-        {items.map(({url, name}, index) =>
-          <GridItem
-            key={index}
-            url={url}
-            name={name}
-          />
-        )}
-      </div>
+      <Menu
+        items={items}
+        updateItems={updateItems}
+        twitter={twitter}
+        setTwitter={setTwitter}
+        title={title}
+        setTitle={setTitle}
+      />
+      <Gallery
+        items={items}
+        title={title}
+        twitter={twitter}
+      />
     </div>
   );
 }
-
-export default App;

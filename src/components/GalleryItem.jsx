@@ -1,7 +1,7 @@
 const tokenUrl = 'https://qql.art/token/';
 const imgUrl = 'https://img.qql.art/nonfinal/';
 
-export default function GridItem({
+export default function GalleryItem({
   url,
   name,
 }) {
@@ -16,7 +16,7 @@ export default function GridItem({
   const imageName = (name && name.length > 0) ? name : 'untitled';
 
   return (
-    <div className="GridItem">
+    <div className="GalleryItem">
       <img src={imageSrc} width={300} />
       <h6>{imageName}</h6>
     </div>
