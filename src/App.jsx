@@ -7,11 +7,6 @@ export default function App() {
   const [twitter, setTwitter] = useState('');
   const [title, setTitle] = useState('');
 
-  const addItem = () => {
-    const newItem = { index: (items.length) }; 
-    setItems(items => [...items, newItem]);
-  }
-  
   const updateItems = (index, key, value) => {
     setItems(items => items.map(item => {
       return item.index === index ? { ...item, [key]: value } : item;
@@ -19,6 +14,11 @@ export default function App() {
   }
 
   useMemo(() => {
+    const addItem = () => {
+      const newItem = { index: (items.length) }; 
+      setItems(items => [...items, newItem]);
+    }
+    
     if (items.length < 1) addItem();
 
     if (items.length > 0 && items[items.length - 1].url?.length > 10) addItem();
